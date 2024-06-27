@@ -11,6 +11,6 @@ async function runOptionSetup(option){
     });
 }
 
-for (option of ['extension','warn','error','debug','log','info']) {
+for (option of ['extension','warn','error','debug','log','info','optionFeedback']) {
     runOptionSetup(option)
 }
