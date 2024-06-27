@@ -3,10 +3,6 @@ async function runOptionSetup(option){
         document.getElementById(option).checked = val[option];
         document.getElementById(option).addEventListener("change", async (e) => {
             await chrome.storage.local.set({ [option]: e.target.checked });
-            console.log(e.target.checked);
-            chrome.storage.local.get(option, function (newVal) {
-                console.log(`Set ${option} to ${newVal[option]}`)
-            });
         });
     });
 }
